@@ -1,5 +1,5 @@
-resource "aws_instance" "my_server" {
-  ami           = "ami-087c17d1fe0178315"
+resource "aws_instance" "app_server" {
+  ami           = "ami-02a53b0d62d37a757"
   instance_type = var.instance_type
 
   tags = {
@@ -7,7 +7,6 @@ resource "aws_instance" "my_server" {
   }
 }
 
-/*
 module "vpc" {
   source = "terraform-aws-modules/vpc/aws"
   providers = {
@@ -29,4 +28,3 @@ module "vpc" {
     Environment = "dev"
   }
 }
-*/
